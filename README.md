@@ -13,4 +13,4 @@ This repository is a check list which is the first term practices in KB IT's you
 | 03  |클래스|03_JAVA| ☐ | ☐ |
 | 04  |상속|04_JAVA| ☐ | ☐ |
 | 05   |인터페이스|05_JAVA| ☐ | ☐ |
-| 07   |예외처리, 라이브러리|07_JAVA| ☐ | ☐ |
+| 07   |예외처리, 라이브러리|07_JAVA| ✅ | ☐ |
