@@ -1,0 +1,39 @@
+package ch14.sec03.exam03;
+
+import java.awt.Toolkit;
+
+public class H02BeepPrintExample {
+    public static void main(String[] args) {
+        //static : 객체를 생성하지 않고 사용 가능하게 했음.
+        //void : 반환값이 없음을 뜻함.
+        Thread thread = new Thread() {
+            //Thread : 스레드라는 작은 작업 단위를 만듦.
+            //thread : 스레드 이름(변수 이름) 지정함
+            //= new Thread() { : 새로운 스레드를 만들면서, 바로 내용을 적어줌
+            @Override
+            public void run() {
+//                run() : 스레드가 시작될 때 실행될 메서드임.
+                Toolkit toolkit = Toolkit.getDefaultToolkit();
+                for(int i = 0; i<5; i++){
+                    //for : 반복문 시작을 의미함.
+                    //int i = 0; : 정수형 변수 i를 0으로 초기화했음.
+                    //i<5; : i가 5보다 작을 때만 반복하도록 조건 설정했음.
+                    //i++ : 반복할 때마다 i를 1씩 증가시킴.
+                    toolkit.beep();
+                    //toolkit : Toolkit 객체를 의미함.
+                    //.beep() : 삑(Beep) 소리를 재생하는 메서드를 호출했음.
+                    try {Thread.sleep(500);} catch(Exception e){}
+                    //try {} : 예외가 발생할 수 있는 코드를 실행해보는 블록임.
+                    //Thread.sleep(500); : 현재 스레드를 500밀리초(0.5초) 동안 멈추게 했음.
+                    //catch(Exception e){} : 예외(Exception)가 발생하면 이 블록으로 넘어오며, 여기서는 별다른 처리 없이 그냥 넘어가게 했음.
+                }
+            }
+        };
+        thread.start();
+        for(int i = 0; i<5; i++){
+            //0부터 5보다 작을 때까지 반복함.
+            System.out.println("띵");
+            try {Thread.sleep(500);} catch(Exception e){}
+        }
+    }
+}
