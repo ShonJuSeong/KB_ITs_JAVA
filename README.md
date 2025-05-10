@@ -20,5 +20,6 @@ This repository is a check list which is the first term practices in KB IT's you
 |10|컬렉션|10_JAVA|✅|☐|
 |11|람다식|11_JAVA|☐|☐|
 |12|스트림 요소 처리|12_JAVA|☐|☐|
+|13|데이터 입출력|13_JAVA|☐|☐|
 
 
