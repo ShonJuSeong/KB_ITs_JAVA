@@ -18,8 +18,8 @@ This repository is a check list which is the first term practices in KB IT's you
 |08|멀티스레드|08_JAVA| ✅ | ☐ |
 |09|제네릭|09_JAVA|✅|☐|
 |10|컬렉션|10_JAVA|✅|☐|
-|11|람다식|11_JAVA|☐|☐|
-|12|스트림 요소 처리|12_JAVA|☐|☐|
-|13|데이터 입출력|13_JAVA|☐|☐|
+|11|람다식|11_JAVA|✅|☐|
+|12|스트림 요소 처리|12_JAVA|✅|☐|
+|13|데이터 입출력|13_JAVA|✅|☐|
 
 
