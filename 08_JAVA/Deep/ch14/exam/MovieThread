@@ -1,0 +1,32 @@
+//멀티스레드 //1초간격으로 "동영상을재생합니다,"를 3회 출력하는 스레드 클래스를 정의하세요.
+public class MovieThread extends Thread {
+    //extends Thread: Thread 클래스를 상속하여, 이 클래스는 자체적으로 실행 가능한 스레드가 됨
+    //extends Thread: Thread 클래스를 상속한다. 즉, MovieThread는 Thread가 된다. 스레드 직접 실행 가능.
+
+    @Override
+    public void run() {
+        //@Override: 부모 클래스(Thread)의 run() 메서드를 재정의
+        //run(): start()를 호출하면 실제 실행되는 메서드. 여기에 스레드 동작 코드를 작성
+        for (int i = 0; i < 3; i++) {
+            System.out.println("동영상을 재생합니다.");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+            }
+            //Thread.sleep(1000);: 1초(1000밀리초) 동안 현재 스레드 정지.
+            //InterruptedException: 다른 스레드가 이 스레드를 깨울 때 발생할 수 있는 예외.
+            //catch(...) {}: 예외 발생 시 아무 조치 안 함 (비어 있음).
+        }
+    }
+}
+
+
+//MovieThread 클래스는 Thread 클래스를 상속(extends) 받아서 동작하는 스레드 클래스
+
+
+//항목	        Thread 상속	            Runnable 구현
+//클래스 이름	    MovieThread	            MusicRunnable
+//상속 여부	    extends Thread      	implements Runnable
+//객체 생성	    new MovieThread()	    new Thread(new MusicRunnable())
+//장점	        간단함	                다중 상속과 조합 가능
+//단점	        다른 클래스 상속 못함	    약간 더 복잡해 보임
