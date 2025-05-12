@@ -1,0 +1,32 @@
+package ch15.sec05.exam03;
+
+import java.util.TreeSet;
+//TreeSet: 자동 정렬되는 Set. 내부에서 compareTo() 또는 Comparator를 사용함.
+//TreeSet은 자동정렬 // 부모 노드 객체와 비교해서 낮은 것은 왼쪽 자식 노드 / 높은 것은 오른쪽 자식 노드에 저장//
+//교재 667page 참고.//최대 2개의 노드를 연결할 수 있는 구조. // 검색기능을 강화시킴.
+//기본적으로 Set은 중복 저장 x / 순서 유지 x 라는 특징 있음.
+
+public class ComparableExample {
+    public static void main(String[] args) {
+        //TreeSet 컬렉션 생성
+        TreeSet<Person> treeSet = new TreeSet<Person>();
+
+        //객체 저장
+        treeSet.add(new Person("홍길동", 45));
+        treeSet.add(new Person("김자바", 25));
+        treeSet.add(new Person("박지원", 31));
+
+        //객체를 하나씩 가져오기
+
+        for(Person person : treeSet) {
+            System.out.println(person.name  + " : " + person.age);
+
+            //향상된 for문: TreeSet에 저장된 Person 객체들을 하나씩 꺼냄.
+            //person.name, person.age: 각 객체의 필드 접근.
+        }
+
+    }
+}
+
+
+//Comparable 인터페이스를 사용하여 Person 객체들을 정렬 가능하게 만들고, TreeSet에 저장하여 자동 정렬
