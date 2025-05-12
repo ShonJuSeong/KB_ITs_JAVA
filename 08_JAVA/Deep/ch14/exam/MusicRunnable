@@ -1,0 +1,11 @@
+public class MusicRunnable implements Runnable{
+    @Override
+    public void run(){
+        for(int i =0;i<3;i++){
+            System.out.println("음악을 재생합니다.");
+            try {Thread.sleep(1000);} catch (InterruptedException e) {
+                }
+        }
+    }
+}
+//☑️ Runnable 구현 방식은 Thread를 상속하지 않기 때문에, 다중 상속이 필요한 상황에서 유리함.
