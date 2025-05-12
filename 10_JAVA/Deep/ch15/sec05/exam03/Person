@@ -1,0 +1,38 @@
+package ch15.sec05.exam03;
+// Person클래스를 \Comparable 인터페이스 구현객체로정의하세요.
+// 전체 매개변수 생성자 추가
+// age 순으로 크기 비교
+public class Person implements Comparable<Person> {
+    //implements:인터페이스 구현 //Comparable<Person>: 제네릭 인터페이스.
+    //Comparable: 자바에서 정렬 가능하게 만들어주는 인터페이스.
+    //<Person>: 이 클래스가 비교하는 대상이 같은 Person 타입 객체
+
+    //필드 선언
+    public String name;
+    public int age;
+
+    //생성자 정의
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    @Override
+    public int compareTo(Person o) {
+        if(age<o.age) return -1;
+        else if(age == o.age) return 0;
+        else return 1;
+
+    //@Override: 부모 클래스나 인터페이스에 있는 메서드를 재정의(오버라이딩)
+        //int: 반환값의 자료형. compareTo()는 정수값을 반환함
+    //Comparable 인터페이스에 정의된 compareTo()를 재정의
+        //o.age: 비교 대상 객체의 나이.
+        //return -1;: 현재 객체가 더 어리면 -1 반환. / 같으면 0 / 아니며 1 반환
+        //compareTo: 메서드 이름. Comparable 인터페이스의 추상 메서드 이름. //(Person o): 매개변수
+    }
+}
+
+
+//Comparable과 Compartor
+// 리턴타입 : int
+// 메소드 : compareTo(T o) //
+//-> 주어진 객체와 같으면 0 리턴 / 적으면 음수 리턴 / 크면 양수 리턴
