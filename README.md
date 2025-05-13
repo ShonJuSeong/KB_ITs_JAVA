@@ -1,6 +1,6 @@
 # KB_ITs_JAVA
-This repository is a check list which is the first term practices in KB IT's your life program.
-- 2025.04.14-2025.00.00
+This repository is a check list which is the third term practices in KB IT's your life program.
+- 2025.04.14-2025.05.10
 
 ---
 - complete: ✅, uncomplete: ☐
