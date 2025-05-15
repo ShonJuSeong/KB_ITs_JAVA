@@ -9,7 +9,7 @@ This repository is a check list which is the third term practices in KB IT's you
 | 항목 |  제목  | 디렉토리명 | 기본 | 심화 |
 |------|:----:|:----:|:----:|:----:|
 | 01 |개발환경 구축, 변수, 타입, 연산자 | 01_JAVA | ✅ | ✅ |
-| 02 |조건문과 반복문, 참조타입 | 02_JAVA | ✅ | ☐ |
+| 02 |조건문과 반복문, 참조타입 | 02_JAVA | ✅ |✅ |
 | 03  |클래스|03_JAVA| ✅ | ☐ |
 | 04  |상속|04_JAVA| ✅ | ☐ |
 | 05   |인터페이스|05_JAVA| ✅| ☐ |
