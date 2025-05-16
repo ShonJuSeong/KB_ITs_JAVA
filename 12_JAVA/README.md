@@ -140,4 +140,4 @@ AVOCADO
 |x -> x.length()	|"x의 길이를 구해"|
 |String::length	"String| 객체의 length 메서드를 써"|
 |x -> set.contains(x)|	"set에 x가 있니?"|
-set::contains	위 코드를 짧게 줄인 것
+set::contains	|위 코드를 짧게 줄인 것
