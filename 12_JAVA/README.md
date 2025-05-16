@@ -123,3 +123,21 @@ AVOCADO
 |중간 연산|	map, filter, sorted, distinct, limit, skip 등|
 |최종 연산	|forEach, collect, reduce, count 등|
 |특징|	원본 데이터 변경 안 함, 선언형(간결), 병렬 처리도 가능|
+
+
+
+## ✅::
+// :: 의 쓰임  
+
+.filter(set::contains)  
+는 사실상  
+.filter(x -> set.contains(x))  
+과 똑같은 코드임.  
+
+
+|형태 |	의미|
+|:---:|:---:|
+|x -> x.length()	|"x의 길이를 구해"|
+|String::length	"String| 객체의 length 메서드를 써"|
+|x -> set.contains(x)|	"set에 x가 있니?"|
+set::contains	위 코드를 짧게 줄인 것
