@@ -14,3 +14,20 @@
 |^=	|XOR 후 저장	|a = a ^ b	|a와 b의 비트 XOR 연산 결과를 a에 저장|
 |<<=	|왼쪽 시프트 후 저장	|a = a << b	|a를 b비트만큼 왼쪽으로 이동|
 |>>=	|오른쪽 시프트 후 저장|	a = a >> b	|a를 b비트만큼 오른쪽으로 이동|
+
+
+
+## for문
+| 향상된 for문 (for-each)  | 전통적인 for문                            |
+| -------------------- | ------------------------------------ |
+| `for(String a : s1)` | `for(int i = 0; i < s1.length; i++)` |
+| 배열 요소를 자동으로 하나씩 꺼냄   | 인덱스를 직접 써야 함                         |
+| 코드가 간결함              | 유연하지만 길어짐                            |
+
+
+String[] s1 = {"apple", "banana", "cherry"};
+
+for (int i = 0; i < s1.length; i++) {
+    String a = s1[i];
+    System.out.println(a);
+}
