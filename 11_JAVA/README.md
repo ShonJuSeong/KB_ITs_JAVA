@@ -62,4 +62,18 @@ printer.accept("홍길동");
 |장점	|코드 간결, 가독성 향상|
 |관련 |인터페이스	Runnable, Comparator, Consumer, Function, Predicate, Supplier 등|
 
+## ✅ 자바 람다식 주요 함수형 인터페이스 정리표
+
+| 인터페이스 이름                 | 메서드 시그니처                | 설명                           | 람다식 예시                                | 메서드 참조 예시                   |
+| ------------------------ | ----------------------- | ---------------------------- | ------------------------------------- | --------------------------- |
+| **Function\<T, R>**      | `R apply(T t)`          | T를 받아 R을 리턴 (입력 → 출력)        | `(x) -> x.length()`                   | `String::length`            |
+| **BiFunction\<T, U, R>** | `R apply(T t, U u)`     | 두 개 입력 T, U → 결과 R 반환        | `(a, b) -> a + b`                     | `Math::pow` (예: `pow(2,3)`) |
+| **Consumer<T>**          | `void accept(T t)`      | T를 받아 소비 (출력만, 반환 없음)        | `x -> System.out.println(x)`          | `System.out::println`       |
+| **BiConsumer\<T, U>**    | `void accept(T t, U u)` | T, U 둘 다 소비                  | `(a, b) -> System.out.println(a + b)` | 없음 (직접 정의 필요)               |
+| **Supplier<T>**          | `T get()`               | 입력 없이 T 타입 값 공급 (리턴만 존재)     | `() -> "Hello"`                       | `String::new`               |
+| **Predicate<T>**         | `boolean test(T t)`     | T를 받아 조건 판별 후 true/false 리턴  | `x -> x > 0`                          | `Objects::isNull`           |
+| **BiPredicate\<T, U>**   | `boolean test(T, U)`    | 두 입력으로 조건 판단                 | `(a, b) -> a.equals(b)`               | `String::equals`            |
+| **UnaryOperator<T>**     | `T apply(T t)`          | 입력과 출력 타입이 동일한 Function      | `x -> x * x`                          | `Math::sqrt`                |
+| **BinaryOperator<T>**    | `T apply(T t, T u)`     | 두 입력(T) 받아 T 반환 (ex. 합, 곱 등) | `(x, y) -> x + y`                     | `Integer::sum`              |
+
 
